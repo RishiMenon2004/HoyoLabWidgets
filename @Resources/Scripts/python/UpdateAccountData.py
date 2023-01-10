@@ -35,7 +35,6 @@ async def updateData():
   
 	with open(args.cookiesdata, "w") as outfile:
 		cookies['accounts'][cookies['currentServer'] - 1]['current_resin'] = resin.current_resin
-		print(cookies)
 		json.dump(cookies, outfile)
  
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())

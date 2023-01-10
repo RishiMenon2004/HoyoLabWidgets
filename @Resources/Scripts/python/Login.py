@@ -17,7 +17,7 @@ client = genshin.Client()
 async def login():
     client = genshin.Client(game=genshin.Game.GENSHIN)
     try:
-        print('Logging In')
+        print("Logging In")
         cookies = await client.login_with_password(args.username, args.password)
         print('Successfully Logged In')
         return(cookies)

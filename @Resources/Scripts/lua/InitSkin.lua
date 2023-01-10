@@ -90,7 +90,7 @@ function Init()
 	serverSelected = checkLogin.checkLogin(accData, currentConfig)
 	
 	if serverSelected ~= 0 then
-		print("server is selected")
+		print("Server is selected")
 		SetServerAndUpdateInfo(serverSelected)
 	end
 
@@ -100,12 +100,12 @@ function Init()
 end
 
 function SetServerAndUpdateInfo(currentServer)
-	print("getting data to set server")
+	print("Getting accounts")
 	accounts = fileSystem.get_json_from_file(playerAccountsFile)
 	if currentServer ~= 0 then
 		accounts["currentServer"] = currentServer
 		fileSystem.write_json_to_file(playerAccountsFile, accounts)
-		print("server set in json")
+		print("Account selected")
 		os.execute("python "..GetAccountDataPy.." -f "..playerAccountsFile.." -o "..playerAccountDataFile.." > "..pyOutputFile)
 		SKIN:Bang("!HideMeterGroup", "ServerFormGroup", currenConfig)
 		SKIN:Bang("!HideMeterGroup", "ServerFormSelectOptionsGroup", currenConfig)

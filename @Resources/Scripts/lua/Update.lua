@@ -13,12 +13,9 @@ function Initialize()
 end
 
 function UpdateText()
-	print("updating text")
+	print("Updating Info")
 	accData = fileSystem.get_json_from_file(playerAccountData)
-	print(accData["nickname"])
 	SKIN:Bang("!SetOption", "PlayerInfoName", "Text", accData["nickname"])
-	print(accData["level"])
 	SKIN:Bang("!SetOption", "PlayerInfoLvl", "Text", "Lv."..accData["level"])
-	print(accData["resin"])
 	SKIN:Bang("!SetOption", "PlayerInfoResinText", "Text", accData["resin"].."/160")
 end

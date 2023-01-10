@@ -13,7 +13,6 @@ function CheckLogin.checkLogin(accData, currentConfig)
 		SKIN:Bang("!HideMeterGroup", "OverlayMessageGroup", currenConfig)
 		
 		if accData["currentServer"] ~= 0 then
-			print(accData["currentServer"])
 			return accData["currentServer"]
 		end
 

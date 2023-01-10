@@ -8,7 +8,6 @@ async def do(uid, token):
         rawAccounts = await client.genshin_accounts()
         otherDetails = await client.get_genshin_notes()
         accounts = []
-        print(otherDetails)
         for account in rawAccounts:
             objAccount = {
 				"lang": account.lang,
